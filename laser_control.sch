@@ -1,35 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:laser_control-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -44,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L H11L1 U2
+L opto:H11L1 U2
 U 1 1 5C063B1B
 P 5950 3650
 F 0 "U2" H 6000 4000 50  0000 L CNN
@@ -55,7 +26,7 @@ F 3 "" H 5860 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L H11L1 U3
+L opto:H11L1 U3
 U 1 1 5C063B7A
 P 5950 5400
 F 0 "U3" H 6000 5750 50  0000 L CNN
@@ -66,7 +37,7 @@ F 3 "" H 5860 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HCT02 U1
+L laser_control-rescue:74HCT02 U1
 U 2 1 5C063C99
 P 4300 3550
 F 0 "U1" H 4300 3600 50  0000 C CNN
@@ -77,7 +48,7 @@ F 3 "" H 4300 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DB9 J1
+L laser_control-rescue:DB9 J1
 U 1 1 5C063D4D
 P 10700 4600
 F 0 "J1" H 10700 5150 50  0000 C CNN
@@ -88,7 +59,7 @@ F 3 "" H 10700 4600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_NPN_BEC Q1
+L device:Q_NPN_BEC Q1
 U 1 1 5C063F42
 P 7450 3650
 F 0 "Q1" H 7650 3700 50  0000 L CNN
@@ -99,7 +70,7 @@ F 3 "" H 7450 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L device:R R6
 U 1 1 5C06407A
 P 6400 3300
 F 0 "R6" V 6480 3300 50  0000 C CNN
@@ -110,7 +81,7 @@ F 3 "" H 6400 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V #PWR21
+L power1:+15V #PWR21
 U 1 1 5C064296
 P 10000 4300
 F 0 "#PWR21" H 10000 4150 50  0001 C CNN
@@ -121,7 +92,7 @@ F 3 "" H 10000 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V #PWR15
+L power1:+15V #PWR15
 U 1 1 5C0642C4
 P 6400 3050
 F 0 "#PWR15" H 6400 2900 50  0001 C CNN
@@ -132,7 +103,7 @@ F 3 "" H 6400 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V #PWR13
+L power1:+15V #PWR13
 U 1 1 5C0642F3
 P 5950 3050
 F 0 "#PWR13" H 5950 2900 50  0001 C CNN
@@ -143,7 +114,7 @@ F 3 "" H 5950 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V #PWR14
+L power1:+15V #PWR14
 U 1 1 5C06436C
 P 5950 4900
 F 0 "#PWR14" H 5950 4750 50  0001 C CNN
@@ -154,7 +125,7 @@ F 3 "" H 5950 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L device:R R8
 U 1 1 5C064446
 P 7550 3200
 F 0 "R8" V 7630 3200 50  0000 C CNN
@@ -165,7 +136,7 @@ F 3 "" H 7550 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V #PWR17
+L power1:+15V #PWR17
 U 1 1 5C06450F
 P 7550 2900
 F 0 "#PWR17" H 7550 2750 50  0001 C CNN
@@ -186,7 +157,7 @@ ENABLE
 Text GLabel 9750 4500 0    60   Input ~ 0
 V_REG
 $Comp
-L R R4
+L device:R R4
 U 1 1 5C06496F
 P 5250 3550
 F 0 "R4" V 5330 3550 50  0000 C CNN
@@ -199,10 +170,10 @@ $EndComp
 Text GLabel 8850 5700 2    60   Input ~ 0
 LASER_GND
 Wire Wire Line
-	6250 3650 6700 3650
+	6250 3650 6400 3650
 Connection ~ 6400 3650
 Wire Wire Line
-	9000 4700 10250 4700
+	9000 4700 9250 4700
 Wire Wire Line
 	7550 3850 7550 3950
 Wire Wire Line
@@ -214,11 +185,11 @@ Wire Wire Line
 Wire Wire Line
 	5950 4900 5950 5100
 Wire Wire Line
-	7550 3350 7550 3450
+	7550 3350 7550 3400
 Wire Wire Line
 	7550 2900 7550 3050
 Wire Wire Line
-	5950 3950 7800 3950
+	5950 3950 7550 3950
 Connection ~ 7550 3950
 Wire Wire Line
 	6400 3650 6400 3450
@@ -232,9 +203,9 @@ Wire Wire Line
 Wire Wire Line
 	5400 3550 5650 3550
 Wire Wire Line
-	5950 5700 8850 5700
+	5950 5700 7150 5700
 $Comp
-L R R7
+L device:R R7
 U 1 1 5C064C0E
 P 6450 5100
 F 0 "R7" V 6530 5100 50  0000 C CNN
@@ -248,7 +219,7 @@ Wire Wire Line
 	6450 5250 6450 5400
 Connection ~ 6450 5400
 $Comp
-L +15V #PWR16
+L power1:+15V #PWR16
 U 1 1 5C064CD6
 P 6450 4900
 F 0 "#PWR16" H 6450 4750 50  0001 C CNN
@@ -261,9 +232,9 @@ $EndComp
 Wire Wire Line
 	6450 4900 6450 4950
 Wire Wire Line
-	6250 5400 6750 5400
+	6250 5400 6450 5400
 $Comp
-L C_Small C2
+L device:C_Small C2
 U 1 1 5C064EBE
 P 7150 5550
 F 0 "C2" H 7160 5620 50  0000 L CNN
@@ -280,7 +251,7 @@ Wire Wire Line
 	7150 5650 7150 5700
 Connection ~ 7150 5700
 $Comp
-L POT RV1
+L device:POT RV1
 U 1 1 5C064FC2
 P 6900 5400
 F 0 "RV1" V 6725 5400 50  0000 C CNN
@@ -298,7 +269,7 @@ Connection ~ 6700 5400
 Text GLabel 9650 5300 2    60   Input ~ 0
 V_REG
 $Comp
-L 74HCT02 U1
+L laser_control-rescue:74HCT02 U1
 U 3 1 5C0656FC
 P 4400 5300
 F 0 "U1" H 4400 5350 50  0000 C CNN
@@ -309,7 +280,7 @@ F 3 "" H 4400 5300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L device:R R5
 U 1 1 5C065840
 P 5300 5300
 F 0 "R5" V 5380 5300 50  0000 C CNN
@@ -324,13 +295,13 @@ Wire Wire Line
 Wire Wire Line
 	5000 5300 5150 5300
 Wire Wire Line
-	3800 5050 3800 5400
+	3800 5050 3800 5200
 Wire Wire Line
 	5650 5500 5450 5500
 Wire Wire Line
 	5450 5500 5450 5550
 $Comp
-L GND #PWR12
+L power1:GND #PWR12
 U 1 1 5C065A34
 P 5450 5550
 F 0 "#PWR12" H 5450 5300 50  0001 C CNN
@@ -343,11 +314,11 @@ $EndComp
 Wire Wire Line
 	4900 3550 5100 3550
 Wire Wire Line
-	7050 5400 7400 5400
+	7050 5400 7150 5400
 Wire Wire Line
 	7400 5400 7400 4750
 $Comp
-L POT RV2
+L device:POT RV2
 U 1 1 5C0660CE
 P 8200 5400
 F 0 "RV2" V 8025 5400 50  0000 C CNN
@@ -358,12 +329,12 @@ F 3 "" H 8200 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8200 4850 8200 5250
+	8200 4850 8200 5100
 Wire Wire Line
 	8200 5550 8200 5700
 Connection ~ 8200 5700
 $Comp
-L +15V #PWR18
+L power1:+15V #PWR18
 U 1 1 5C0663BA
 P 7800 4450
 F 0 "#PWR18" H 7800 4300 50  0001 C CNN
@@ -374,7 +345,7 @@ F 3 "" H 7800 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L device:R R1
 U 1 1 5C06664B
 P 3650 3200
 F 0 "R1" V 3730 3200 50  0000 C CNN
@@ -385,7 +356,7 @@ F 3 "" H 3650 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L device:R R3
 U 1 1 5C066700
 P 3800 4900
 F 0 "R3" V 3880 4900 50  0000 C CNN
@@ -396,7 +367,7 @@ F 3 "" H 3800 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L device:R R2
 U 1 1 5C066793
 P 3700 3950
 F 0 "R2" V 3780 3950 50  0000 C CNN
@@ -410,7 +381,7 @@ Wire Wire Line
 	3700 3650 3700 3800
 Connection ~ 3800 5200
 $Comp
-L +5V #PWR9
+L power1:+5V #PWR9
 U 1 1 5C0668EE
 P 3650 2950
 F 0 "#PWR9" H 3650 2800 50  0001 C CNN
@@ -421,7 +392,7 @@ F 3 "" H 3650 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR10
+L power1:+5V #PWR10
 U 1 1 5C066926
 P 3700 4250
 F 0 "#PWR10" H 3700 4100 50  0001 C CNN
@@ -436,7 +407,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 4600 3800 4750
 $Comp
-L CONN_01X06 P1
+L laser_control-rescue:CONN_01X06 P1
 U 1 1 5C066BC8
 P 2350 3500
 F 0 "P1" H 2350 3800 50  0000 C CNN
@@ -447,11 +418,11 @@ F 3 "" H 2350 3500 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2600 3350 2900 3350
+	2600 3350 2750 3350
 Wire Wire Line
 	2900 3350 2900 3250
 $Comp
-L +5V #PWR7
+L power1:+5V #PWR7
 U 1 1 5C066CD7
 P 2900 3250
 F 0 "#PWR7" H 2900 3100 50  0001 C CNN
@@ -462,7 +433,7 @@ F 3 "" H 2900 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR6
+L power1:GND #PWR6
 U 1 1 5C066D11
 P 2750 3700
 F 0 "#PWR6" H 2750 3450 50  0001 C CNN
@@ -477,7 +448,7 @@ Wire Wire Line
 Wire Wire Line
 	3650 2950 3650 3050
 Wire Wire Line
-	2700 3450 3700 3450
+	2700 3450 3650 3450
 Wire Wire Line
 	3650 3350 3650 3450
 Connection ~ 3650 3450
@@ -498,7 +469,7 @@ P
 Text Label 3050 4000 2    60   ~ 0
 PWM_IN
 $Comp
-L CP_Small C1
+L device:CP_Small C1
 U 1 1 5C06718D
 P 2400 4600
 F 0 "C1" H 2410 4670 50  0000 L CNN
@@ -509,7 +480,7 @@ F 3 "" H 2400 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR3
+L power1:+5V #PWR3
 U 1 1 5C067202
 P 2400 4350
 F 0 "#PWR3" H 2400 4200 50  0001 C CNN
@@ -520,7 +491,7 @@ F 3 "" H 2400 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR4
+L power1:GND #PWR4
 U 1 1 5C0672B6
 P 2400 4750
 F 0 "#PWR4" H 2400 4500 50  0001 C CNN
@@ -535,7 +506,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 4700 2400 4750
 $Comp
-L CP_Small C3
+L device:CP_Small C3
 U 1 1 5C0675C7
 P 9250 4100
 F 0 "C3" H 9260 4170 50  0000 L CNN
@@ -546,7 +517,7 @@ F 3 "" H 9250 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V #PWR20
+L power1:+15V #PWR20
 U 1 1 5C067662
 P 9250 3800
 F 0 "#PWR20" H 9250 3650 50  0001 C CNN
@@ -564,7 +535,7 @@ Wire Wire Line
 Text Notes 9050 7500 2    60   ~ 0
 Контроль лазерного блока питания
 $Comp
-L VCC #PWR5
+L power1:VCC #PWR5
 U 1 1 5C06A2DD
 P 2750 3300
 F 0 "#PWR5" H 2750 3150 50  0001 C CNN
@@ -594,7 +565,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 3650 2550 3650
 $Comp
-L 74HCT02 U1
+L laser_control-rescue:74HCT02 U1
 U 1 1 5C276FC0
 P 4950 4100
 F 0 "U1" H 4950 4150 50  0000 C CNN
@@ -605,9 +576,9 @@ F 3 "" H 4950 4100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 4000 4350 4300
+	4350 4000 4350 4200
 $Comp
-L R R11
+L device:R R11
 U 1 1 5C277267
 P 4350 4450
 F 0 "R11" V 4430 4450 50  0000 C CNN
@@ -621,7 +592,7 @@ Connection ~ 4350 4200
 Wire Wire Line
 	4350 4600 4350 4700
 $Comp
-L GND #PWR11
+L power1:GND #PWR11
 U 1 1 5C2773F5
 P 4350 4700
 F 0 "#PWR11" H 4350 4450 50  0001 C CNN
@@ -648,7 +619,7 @@ Wire Wire Line
 Text GLabel 4250 4000 0    60   Input ~ 0
 K+
 $Comp
-L R R9
+L device:R R9
 U 1 1 5C277CF8
 P 6850 3650
 F 0 "R9" V 6930 3650 50  0000 C CNN
@@ -661,7 +632,7 @@ $EndComp
 Wire Wire Line
 	7000 3650 7250 3650
 $Comp
-L LM358 U4
+L linear:LM358 U4
 U 2 1 5C277331
 P 7900 4850
 F 0 "U4" H 7900 5050 50  0000 L CNN
@@ -672,7 +643,7 @@ F 3 "" H 7900 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM358 U4
+L linear:LM358 U4
 U 1 1 5C2773B6
 P 8900 5300
 F 0 "U4" H 8900 5500 50  0000 L CNN
@@ -705,7 +676,7 @@ Wire Wire Line
 Wire Wire Line
 	8600 5550 9200 5550
 $Comp
-L C C4
+L device:C C4
 U 1 1 5C277EF1
 P 9350 5450
 F 0 "C4" H 9375 5550 50  0000 L CNN
@@ -718,9 +689,9 @@ $EndComp
 Wire Wire Line
 	9200 5550 9200 5600
 Wire Wire Line
-	9200 5600 9500 5600
+	9200 5600 9350 5600
 $Comp
-L R R10
+L device:R R10
 U 1 1 5C278084
 P 9650 5600
 F 0 "R10" V 9730 5600 50  0000 C CNN
@@ -740,7 +711,7 @@ V_FB
 Wire Wire Line
 	9800 5600 9950 5600
 $Comp
-L +15V #PWR19
+L power1:+15V #PWR19
 U 1 1 5C278451
 P 8800 4950
 F 0 "#PWR19" H 8800 4800 50  0001 C CNN
@@ -756,10 +727,10 @@ Wire Wire Line
 	8800 5600 8800 5700
 Connection ~ 8800 5700
 Wire Wire Line
-	9200 5300 9650 5300
+	9200 5300 9350 5300
 Connection ~ 9350 5300
 $Comp
-L GND #PWR8
+L power1:GND #PWR8
 U 1 1 5C28AD29
 P 3550 4600
 F 0 "#PWR8" H 3550 4350 50  0001 C CNN
@@ -772,7 +743,7 @@ $EndComp
 Wire Wire Line
 	3550 4600 3800 4600
 $Comp
-L button1 S1
+L laser_control-rescue:button1 S1
 U 1 1 5C6867BB
 P 1400 3050
 F 0 "S1" H 1600 3150 60  0000 C CNN
@@ -787,7 +758,7 @@ Wire Wire Line
 Text Label 1900 3100 0    60   ~ 0
 K
 $Comp
-L button1 S1
+L laser_control-rescue:button1 S1
 U 2 1 5C686CC1
 P 1400 3350
 F 0 "S1" H 1600 3450 60  0000 C CNN
@@ -808,7 +779,7 @@ Wire Wire Line
 Wire Wire Line
 	950  3350 950  3600
 $Comp
-L GND #PWR1
+L power1:GND #PWR1
 U 1 1 5C6871AA
 P 950 3150
 F 0 "#PWR1" H 950 2900 50  0001 C CNN
@@ -823,7 +794,7 @@ Wire Wire Line
 Wire Wire Line
 	950  3050 1200 3050
 $Comp
-L +5V #PWR2
+L power1:+5V #PWR2
 U 1 1 5C6872A1
 P 950 3600
 F 0 "#PWR2" H 950 3450 50  0001 C CNN
@@ -833,4 +804,40 @@ F 3 "" H 950 3600 50  0001 C CNN
 	1    950  3600
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	6400 3650 6700 3650
+Wire Wire Line
+	7550 3950 7800 3950
+Wire Wire Line
+	7550 3400 7550 3450
+Wire Wire Line
+	6450 5400 6700 5400
+Wire Wire Line
+	7150 5400 7400 5400
+Wire Wire Line
+	7150 5700 7800 5700
+Wire Wire Line
+	6700 5400 6750 5400
+Wire Wire Line
+	8200 5700 8800 5700
+Wire Wire Line
+	3800 5200 3800 5400
+Wire Wire Line
+	3650 3450 3700 3450
+Wire Wire Line
+	9250 4700 10250 4700
+Wire Wire Line
+	2750 3350 2900 3350
+Wire Wire Line
+	4350 4200 4350 4300
+Wire Wire Line
+	7800 5700 8200 5700
+Wire Wire Line
+	8200 5100 8200 5250
+Wire Wire Line
+	9350 5600 9500 5600
+Wire Wire Line
+	8800 5700 8850 5700
+Wire Wire Line
+	9350 5300 9650 5300
 $EndSCHEMATC
